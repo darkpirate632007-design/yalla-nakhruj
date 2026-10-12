@@ -1,0 +1,35 @@
+{
+  "id": ".",
+  "name": "يلا نخرج | Yalla Nakhruj",
+  "short_name": "يلا نخرج",
+  "description": "اكتشفي أماكن للخروج، مطاعم وكافيهات وتجارب قريبة منك.",
+  "lang": "ar",
+  "dir": "auto",
+  "start_url": ".",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fbf9ff",
+  "theme_color": "#6b35c8",
+  "categories": ["travel", "lifestyle", "navigation"],
+  "icons": [
+    {
+      "src": "icons/yalla-nakhruj-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/yalla-nakhruj-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/yalla-nakhruj-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
