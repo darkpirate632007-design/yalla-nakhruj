@@ -1,3 +1,6 @@
+
+/* ================= GENERAL ================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,21 +9,26 @@
 
 html {
   scroll-behavior: smooth;
+  background: #0b0b0f;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #222222;
+  background: #0b0b0f;
+  color: #f5f1fc;
 }
 
 #root {
   width: 100%;
+  min-height: 100vh;
+  background: #0b0b0f;
 }
 
 .app {
   width: 100%;
   min-height: 100vh;
+  background: #0b0b0f;
+  color: #f5f1fc;
 }
 
 /* ================= NAVBAR ================= */
@@ -32,8 +40,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 7%;
-  background: #ffffff;
-  border-bottom: 1px solid #eeeeee;
+  background: #111015;
+  border-bottom: 1px solid #292431;
   position: relative;
   z-index: 10;
 }
@@ -52,14 +60,14 @@ body {
 
 .navbar nav a {
   text-decoration: none;
-  color: #333333;
+  color: #e9e2f4;
   font-size: 15px;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .navbar nav a:hover {
-  color: #6c35de;
+  color: #a98aff;
 }
 
 .language-btn {
@@ -74,6 +82,7 @@ body {
 }
 
 .language-btn:hover {
+  background: #8256ef;
   transform: translateY(-2px);
 }
 
@@ -88,13 +97,12 @@ body {
   justify-content: space-between;
   gap: 60px;
   overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 85% 45%,
-      #eadcff 0%,
-      #f6f1ff 25%,
-      #ffffff 60%
-    );
+  background: radial-gradient(
+    circle at 85% 45%,
+    #302044 0%,
+    #191323 32%,
+    #0b0b0f 72%
+  );
 }
 
 .hero-content {
@@ -103,7 +111,7 @@ body {
 }
 
 .small-title {
-  color: #6c35de;
+  color: #b69aff;
   font-size: 13px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -114,17 +122,17 @@ body {
   font-size: clamp(52px, 6vw, 88px);
   line-height: 0.98;
   font-weight: 800;
-  color: #191919;
+  color: #ffffff;
   margin-bottom: 30px;
 }
 
 .hero h1 span {
-  color: #6c35de;
+  color: #a783ff;
 }
 
 .description {
   max-width: 600px;
-  color: #666666;
+  color: #c8bfd5;
   font-size: 18px;
   line-height: 1.7;
   margin-bottom: 35px;
@@ -150,23 +158,25 @@ body {
 .primary-btn {
   border: none;
   background: #6c35de;
-  color: white;
+  color: #ffffff;
   box-shadow: 0 10px 25px rgba(108, 53, 222, 0.25);
 }
 
 .primary-btn:hover {
+  background: #8256ef;
   transform: translateY(-3px);
 }
 
 .secondary-btn {
-  border: 1px solid #dddddd;
-  background: white;
-  color: #333333;
+  border: 1px solid #484052;
+  background: #19161f;
+  color: #f5f1fc;
 }
 
 .secondary-btn:hover {
-  border-color: #6c35de;
-  color: #6c35de;
+  border-color: #9870ff;
+  color: #c9b5ff;
+  background: #251b35;
 }
 
 /* ================= HERO VISUAL ================= */
@@ -188,13 +198,13 @@ body {
 .circle-one {
   width: 390px;
   height: 390px;
-  background: #e8d9ff;
+  background: #291b40;
 }
 
 .circle-two {
   width: 280px;
   height: 280px;
-  background: #d8c0ff;
+  background: #43266c;
 }
 
 .visual-card {
@@ -204,8 +214,10 @@ body {
   position: relative;
   z-index: 2;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 25px 60px rgba(70, 40, 120, 0.18);
+  background: rgba(25, 22, 33, 0.96);
+  color: #ffffff;
+  border: 1px solid #393044;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
 }
 
@@ -215,19 +227,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f0e7ff;
+  background: #302044;
   border-radius: 50%;
   font-size: 25px;
   margin-bottom: 25px;
 }
 
 .visual-card h3 {
+  color: #ffffff;
   font-size: 23px;
   margin-bottom: 10px;
 }
 
 .visual-card p {
-  color: #777777;
+  color: #c7bfd2;
   line-height: 1.6;
 }
 
@@ -236,7 +249,8 @@ body {
 .categories {
   width: 100%;
   padding: 90px 8%;
-  background: #ffffff;
+  background: #0b0b0f;
+  color: #f5f1fc;
 }
 
 .section-header {
@@ -244,7 +258,7 @@ body {
 }
 
 .section-header p {
-  color: #6c35de;
+  color: #b69aff;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -253,29 +267,35 @@ body {
 
 .section-header h2 {
   font-size: 40px;
-  color: #1b1b1b;
+  color: #ffffff;
 }
 
 .category-list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
 .category-card {
   min-height: 190px;
   padding: 30px;
+  border: 1px solid #30263f;
   border-radius: 24px;
-  background: #f8f6fc;
+  background: #17141e;
+  color: #f5f1fc;
   transition: 0.3s;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 .category-card:hover {
   transform: translateY(-7px);
-  background: #eee5ff;
-  box-shadow: 0 15px 35px rgba(80, 40, 130, 0.1);
+  background: #251a36;
+  border-color: #63429a;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .category-card span {
@@ -286,66 +306,80 @@ body {
 
 .category-card h3 {
   font-size: 20px;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .category-card p {
-  color: #777777;
+  color: #c4bbd0;
   font-size: 14px;
 }
 
-/* ================= RESTAURANTS ================= */
+/* Keep clicks on the category card itself */
+
+.category-card * {
+  pointer-events: none;
+}
+
+.category-list {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= PLACES SECTION ================= */
 
 .places-section {
   width: 100%;
   padding: 90px 8%;
-  background: #faf9fc;
+  background: #101015;
+  color: #f5f1fc;
 }
 
 .places-description {
-  color: #777777;
+  color: #c4bbd0;
   margin-top: 12px;
   font-size: 16px;
+  line-height: 1.7;
 }
 
 .places-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
 }
 
-/* ================= RESTAURANT CARD ================= */
+/* ================= PLACE CARD ================= */
 
 .place-card {
-  background: #ffffff;
+  min-width: 0;
+  background: #19171f;
+  color: #f5f1fc;
   border-radius: 25px;
   overflow: hidden;
-  border: 1px solid #eeeeee;
+  border: 1px solid #302a38;
   transition: 0.3s;
-  box-shadow: 0 10px 30px rgba(40, 20, 70, 0.06);
-
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
 }
 
 .place-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(40, 20, 70, 0.12);
+  border-color: #514063;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
 }
 
-/* ================= RESTAURANT IMAGE ================= */
+/* ================= PLACE IMAGE ================= */
 
 .place-image {
   width: 100%;
   height: 190px;
   overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: #eee5ff;
+  background: #241b32;
 }
 
 .place-image img {
@@ -353,45 +387,43 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s;
 }
 
-/* ================= RESTAURANT INFO ================= */
+.place-card:hover .place-image img {
+  transform: scale(1.04);
+}
+
+/* ================= PLACE INFO ================= */
 
 .place-info {
   padding: 25px;
   display: flex;
   flex-direction: column;
+  color: #f5f1fc;
 }
 
-/* اسم المطعم */
+/* Place name strip */
 
 .place-info h3 {
   display: block !important;
-
-  width: 100%;
-
+  width: calc(100% + 50px) !important;
   color: #ffffff !important;
   background: #6c35de !important;
-
   font-size: 20px !important;
   font-weight: 700 !important;
   line-height: 1.4 !important;
-
   padding: 13px 15px !important;
   margin: -25px -25px 18px -25px !important;
-
-  width: calc(100% + 50px) !important;
-
   position: relative;
   z-index: 5;
-
-  box-shadow: 0 5px 15px rgba(108, 53, 222, 0.15);
+  box-shadow: 0 5px 15px rgba(108, 53, 222, 0.2);
 }
 
 .place-info p {
-  color: #777777;
+  color: #d0c9da;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
   margin-bottom: 15px;
 }
 
@@ -403,8 +435,8 @@ body {
   display: inline-block;
   padding: 8px 13px;
   border-radius: 20px;
-  background: #f0e7ff;
-  color: #6c35de;
+  background: #302044;
+  color: #d9c8ff;
   font-size: 12px;
   font-weight: bold;
 }
@@ -415,52 +447,45 @@ body {
   border: none;
   background: #6c35de;
   color: #ffffff;
-
   padding: 12px 18px;
   border-radius: 14px;
-
   font-size: 14px;
   cursor: pointer;
-
   transition: 0.3s;
 }
 
 .place-info .primary-btn:hover {
+  background: #8256ef;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(108, 53, 222, 0.25);
 }
 
-/* ================= COUNTRY WINDOW ================= */
+/* ================= COUNTRY POPUP ================= */
 
 .country-overlay {
   position: fixed;
   inset: 0;
-
-  background: rgba(20, 10, 35, 0.55);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(7px);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 25px;
-
   z-index: 9999;
 }
 
 .country-modal {
   width: 100%;
   max-width: 560px;
-
-  background: #ffffff;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #17141e;
+  color: #f5f1fc;
+  border: 1px solid #352b42;
   border-radius: 30px;
-
   padding: 45px;
-
   position: relative;
-
-  box-shadow: 0 30px 80px rgba(30, 10, 60, 0.3);
-
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
   animation: modalShow 0.3s ease;
 }
 
@@ -480,27 +505,24 @@ body {
   position: absolute;
   top: 18px;
   right: 20px;
-
   width: 38px;
   height: 38px;
-
   border: none;
   border-radius: 50%;
-
-  background: #f3effa;
-  color: #555555;
-
+  background: #2b2336;
+  color: #ffffff;
   font-size: 25px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .close-country:hover {
   background: #6c35de;
-  color: white;
+  color: #ffffff;
 }
 
 .modal-small-title {
-  color: #6c35de;
+  color: #b69aff;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -509,13 +531,13 @@ body {
 
 .country-modal h2 {
   font-size: 32px;
-  color: #1c1c1c;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
 .modal-description {
-  color: #777777;
-  line-height: 1.6;
+  color: #c7bfd2;
+  line-height: 1.7;
   margin-bottom: 25px;
 }
 
@@ -527,36 +549,145 @@ body {
 
 .country-option {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  gap: 12px;
   padding: 16px 20px;
-
-  border: 1px solid #eeeeee;
+  border: 1px solid #393044;
   border-radius: 16px;
-
-  background: #faf9fc;
-
+  background: #211c29;
   font-size: 16px;
-  color: #333333;
-
+  color: #f1ebfa;
   cursor: pointer;
   transition: 0.25s;
 }
 
 .country-option:hover {
-  background: #f0e7ff;
-  border-color: #6c35de;
-  color: #6c35de;
+  background: #302044;
+  border-color: #8b63f6;
+  color: #e1d2ff;
   transform: translateX(4px);
+}
+
+/* ================= COUNTRY SIDEBAR ================= */
+
+.country-category-layout {
+  display: grid !important;
+  grid-template-columns: minmax(230px, 290px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding-top: 34px;
+}
+
+.country-sidebar {
+  position: sticky;
+  top: 24px;
+  padding: 22px;
+  border: 1px solid #352843;
+  border-radius: 22px;
+  background: linear-gradient(160deg, #1b1724 0%, #111015 100%);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.country-sidebar-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.country-sidebar-heading > span {
+  font-size: 30px;
+}
+
+.country-sidebar-heading p {
+  margin: 0 0 3px;
+  color: #b9a0e8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.country-sidebar-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.country-sidebar-list {
+  display: grid;
+  gap: 9px;
+}
+
+.country-sidebar-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #352b42;
+  border-radius: 12px;
+  background: #19161f;
+  color: #eee7f8;
+  font: inherit;
+  font-weight: 650;
+  text-align: start;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+.country-sidebar-option:hover,
+.country-sidebar-option.active {
+  border-color: #8b63f6;
+  background: #2a1d40;
+  color: #e1d2ff;
+  transform: translateY(-1px);
+}
+
+.country-selected-note {
+  margin: 16px 0 0;
+  color: #c9bed8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.category-content {
+  min-width: 0;
+}
+
+.country-category-layout .section-header {
+  margin-top: 0;
+}
+
+/* ================= OTHER TEXT AND INPUTS ================= */
+
+input,
+textarea,
+select {
+  max-width: 100%;
+  background: #19161f;
+  color: #f5f1fc;
+  border-color: #40364c;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a69bb5;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  transition: color 0.2s ease;
 }
 
 /* ================= TABLET ================= */
 
 @media (max-width: 950px) {
-
   .navbar {
     padding: 0 5%;
   }
@@ -567,18 +698,32 @@ body {
 
   .hero {
     padding: 60px 6%;
+    gap: 35px;
   }
 
   .category-list,
   .places-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .circle-one {
+    width: 320px;
+    height: 320px;
+  }
+
+  .circle-two {
+    width: 235px;
+    height: 235px;
+  }
+
+  .visual-card {
+    width: 270px;
   }
 }
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 700px) {
-
   .navbar {
     height: 70px;
     padding: 0 5%;
@@ -598,6 +743,7 @@ body {
     padding: 70px 6%;
     flex-direction: column;
     text-align: center;
+    gap: 30px;
   }
 
   .hero-content {
@@ -632,6 +778,11 @@ body {
     height: 210px;
   }
 
+  .visual-card {
+    width: min(300px, 90%);
+    padding: 28px;
+  }
+
   .categories,
   .places-section {
     padding: 65px 6%;
@@ -643,11 +794,16 @@ body {
 
   .category-list,
   .places-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .category-card {
+    min-height: 160px;
   }
 
   .country-modal {
     padding: 35px 22px;
+    border-radius: 24px;
   }
 
   .country-modal h2 {
@@ -655,28 +811,308 @@ body {
   }
 
   .place-image {
-    height: 170px;
+    height: 190px;
   }
 
   .place-info h3 {
     font-size: 18px !important;
   }
+
+  .country-category-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .country-sidebar {
+    position: static;
+    padding: 18px;
+  }
+
+  .country-sidebar-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .country-sidebar-option {
+    padding: 11px 10px;
+    font-size: 13px;
+  }
 }
 
-/* ================= CATEGORY CLICK FIX ================= */
+/* ================= SMALL MOBILE ================= */
 
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .country-sidebar-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .country-modal {
+    padding: 32px 18px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+}
+
+/* خلفية الشاشة الرئيسية والـ Categories فقط */
+.hero,
+.categories {
+  background-image:
+    linear-gradient(
+      rgba(8, 7, 15, 0.58),
+      rgba(8, 7, 15, 0.72)
+    ),
+    url("/home-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+/* إلغاء الخلفية الفاتحة من قسم التصنيفات */
+.categories {
+  background-color: transparent;
+}
+
+/* الحفاظ على لون الهوية البنفسجي */
 .category-card {
-  position: relative !important;
-  z-index: 9999 !important;
-  pointer-events: auto !important;
-  cursor: pointer !important;
+  position: relative;
+  z-index: 2;
+}
+/* جعل كروت التصنيفات شفافة تمامًا */
+.category-card {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.category-list {
-  position: relative !important;
-  z-index: 9999 !important;
+/* عند الوقوف على الكارت */
+.category-card:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}/* كروت شفافة بإطار أنيق */
+.category-card {
+  background: transparent !important;
+  background-color: transparent !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  border-radius: 16px;
+
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.category-card * {
-  pointer-events: none !important;
+/* تأثير بسيط عند الوقوف على الكارت */
+.category-card:hover {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.95) !important;
+  transform: translateY(-3px);
+  box-shadow: none !important;
+}
+/* ===== جعل التوب بار متناسق مع صورة الخلفية ===== */
+
+.navbar {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: none !important;
+}
+
+/* ===== جعل قائمة الدول الجانبية شفافة ===== */
+
+.country-sidebar {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+}
+
+/* ===== جعل أزرار الدول شفافة ===== */
+
+.country-sidebar-option {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* الدولة المختارة أو عند الوقوف عليها */
+
+.country-sidebar-option:hover,
+.country-sidebar-option.active {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ===== زر اللغة في التوب بار ===== */
+
+.language-btn {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ===== الحفاظ على وضوح النصوص ===== */
+
+.navbar nav a,
+.country-sidebar-heading h2,
+.country-sidebar-heading p,
+.country-selected-note {
+  color: #ffffff !important;
+}
+/* الشريط العلوي بكل محتوياته */
+.navbar {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* مساحة للشريط فوق محتوى الصفحة الرئيسية */
+.hero {
+  padding-top: 152px;
+}
+
+/* التوب بار: فريم شفاف */
+.navbar {
+  width: calc(100% - 40px) !important;
+  margin: 16px auto !important;
+  min-height: 82px;
+  padding: 14px 28px !important;
+
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 22px !important;
+  box-shadow: none !important;
+
+  position: relative;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: calc(100% - 20px) !important;
+    margin: 10px auto !important;
+    padding: 12px 14px !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* تنزيل قائمة الدول لتحت ومنع تداخلها مع التوب بار */
+.country-sidebar {
+  margin-top: 45px !important;
+  position: relative;
+  z-index: 5;
+}
+h2 {
+  margin-top: 45px;
+}
+h2 {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+h2 {
+  display: inline-block;
+  transform: scaleX(1.2);
+  transform-origin: right center;
+}
+/* إخفاء اللوجو من التوب بار */
+.navbar .logo-image {
+  display: none !important;
+}
+
+/* خلفية سوداء لكل صفحات الموقع ما عدا الرئيسية */
+body,
+#root {
+  background-color: #000000;
+}
+
+/* الصفحات الداخلية */
+.page,
+.explore-page,
+.favorites-page,
+.outing-page,
+.category-page,
+.place-details {
+  background-color: #000000 !important;
+}
+
+/* الكروت والعناصر داخل الصفحات الداخلية */
+.place-card,
+.category-card,
+.favorite-card,
+.outing-card {
+  background-color: #111111;
+  border-color: #292929;
+}
+
+/* الصفحة الرئيسية التي تحتوي على الصورة تظل كما هي */
+.home-page {
+  background-color: transparent;
+  background-image: url("/home-bg.webp");
+}
+
+/* الخلفية السوداء للموقع */
+body,
+#root {
+  background-color: #000 !important;
+  color: #fff;
+}
+
+/* الصفحات الداخلية */
+.explore-page,
+.favorites-page,
+.outing-page,
+.category-page,
+.place-details,
+.page {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* الكروت الأخرى فقط، بدون كروت Categories */
+.place-card,
+.favorite-card,
+.outing-card,
+.modal,
+.popup,
+.dropdown {
+  background-color: #111 !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+/* حقول البحث والإدخال */
+input,
+select,
+textarea {
+  background-color: #111 !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+/* الصفحة الرئيسية تحتفظ بصورة الخلفية */
+.home-page {
+  background-image: url("/home-bg.webp");
 }

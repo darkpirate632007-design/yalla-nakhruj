@@ -7,6 +7,8 @@ export default function ExplorePage() {
     addToOuting,
     availablePlaceTypes,
     categories,
+    countries,
+    chooseCountry,
     categoryDescription,
     categoryName,
     categoryTitle,
@@ -72,9 +74,36 @@ export default function ExplorePage() {
 
   return (
     <>
-{selectedCountry &&
-          !selectedCategory && (
-            <section className="categories">
+{!selectedCategory && (
+            <section className="categories country-category-layout">
+              <aside className="country-sidebar">
+                <div className="country-sidebar-heading">
+                  <span aria-hidden="true">🌍</span>
+                  <div>
+                    <p>{isArabic ? "اختاري وجهتك" : "YOUR DESTINATION"}</p>
+                    <h2>{isArabic ? "الدول" : "Countries"}</h2>
+                  </div>
+                </div>
+                <div className="country-sidebar-list">
+                  {countries.map((country) => (
+                    <button
+                      type="button"
+                      key={country}
+                      className={`country-sidebar-option ${selectedCountry === country ? "active" : ""}`}
+                      onClick={() => chooseCountry(country)}
+                    >
+                      <span>{displayCountry(country)}</span>
+                      <span aria-hidden="true">{selectedCountry === country ? "✓" : "←"}</span>
+                    </button>
+                  ))}
+                </div>
+                {selectedCountry && (
+                  <p className="country-selected-note">
+                    {isArabic ? "الدولة المختارة:" : "Selected country:"} <strong>{displayCountry(selectedCountry)}</strong>
+                  </p>
+                )}
+              </aside>
+              <div className="category-content">
               <div className="section-header">
                 <p>
                   {isArabic
@@ -84,8 +113,7 @@ export default function ExplorePage() {
 
                 <h2>
                   {isArabic
-                    ? "ماذا تبحثين عنه؟"
-                    : "What are you looking for?"}
+? "هيا نستمتع!"                    : "What are you looking for?"}
                 </h2>
               </div>
 
@@ -123,6 +151,7 @@ export default function ExplorePage() {
                     </div>
                   )
                 )}
+              </div>
               </div>
             </section>
           )}

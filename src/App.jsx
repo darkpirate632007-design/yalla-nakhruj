@@ -81,9 +81,9 @@ async function fetchVerifiedWikidataPhoto(wikidataId) {
 const APP_ROUTES = new Set(["home", "places", "favorites", "outing", "details"]);
 
 function getAppRouteFromHash() {
-  if (typeof window === "undefined") return "home";
+  if (typeof window === "undefined") return "places";
   const route = String(window.location.hash || "").replace(/^#\/?/, "").split("/")[0].split("?")[0];
-  return APP_ROUTES.has(route) ? route : "home";
+  return APP_ROUTES.has(route) ? (route === "home" ? "places" : route) : "places";
 }
 
 function App() {
@@ -99,14 +99,9 @@ function App() {
     }
   });
 
-  const [selectedCategory, setSelectedCategory] = useState(() => {
-    try {
-      return window.localStorage.getItem("yalla-nakhruj-selected-category") || "";
-    } catch (error) {
-      console.warn("Could not restore selected category:", error);
-      return "";
-    }
-  });
+  // Start on the country/category chooser every time the site opens.
+  // Keep the last chosen country, but do not reopen an old category automatically.
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const [selectedPlace, setSelectedPlace] =
     useState(null);
@@ -264,9 +259,6 @@ function App() {
   }, [currentPage, selectedPlace, selectedCountry]);
 
   useEffect(() => {
-    if (currentPage === "places" && !selectedCountry && !showCountries) {
-      setShowCountries(true);
-    }
     if (currentPage === "favorites" && !showFavoritesOnly) {
       setShowFavoritesOnly(true);
       setSelectedCategory("Favorites");
@@ -836,17 +828,12 @@ function App() {
   function goHome() {
     setShowFavoritesOnly(false);
     setShowCountries(false);
-    setSelectedCountry("");
     setSelectedCategory("");
     setPlaces([]);
     setLocationMessage("");
     clearSearch();
-    navigateTo("home");
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    navigateTo("places");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function goPlaces() {
@@ -3159,6 +3146,10 @@ function App() {
   function selectCategory(
     category
   ) {
+    if (!selectedCountry) {
+      setShowCountries(true);
+      return;
+    }
     setShowFavoritesOnly(false);
     navigateTo("places");
     setSelectedCategory(category);
@@ -3509,11 +3500,9 @@ function App() {
       <Navbar />
 
       <main>
-        {currentPage === "home" && <HomePage />}
+        {(currentPage === "home" || currentPage === "places" || currentPage === "favorites") && <ExplorePage />}
 
         {currentPage === "outing" && <OutingPlannerPage />}
-
-        {(currentPage === "places" || currentPage === "favorites") && <ExplorePage />}
       </main>
 
       {currentPage === "details" && selectedPlace && <PlaceDetailsModal />}
