@@ -1116,3 +1116,97 @@ textarea {
 .home-page {
   background-image: url("/home-bg.webp");
 }
+
+/* ===== تعديل الرئيسية على الموبايل فقط ===== */
+@media (max-width: 700px) {
+  .country-category-layout {
+    grid-template-columns: minmax(105px, 0.7fr) minmax(0, 1.5fr) !important;
+    gap: 12px !important;
+    padding: 20px 3% !important;
+    align-items: start;
+  }
+
+  .country-sidebar {
+    margin-top: 0 !important;
+    padding: 10px !important;
+    min-width: 0;
+  }
+
+  .country-sidebar-heading {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .country-sidebar-heading > span {
+    font-size: 20px;
+  }
+
+  .country-sidebar-heading h2 {
+    font-size: 15px;
+    min-height: auto;
+    margin-top: 0;
+    transform: none;
+  }
+
+  .country-sidebar-heading p {
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+
+  .country-sidebar-list {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 7px;
+  }
+
+  .country-sidebar-option {
+    padding: 9px 6px;
+    font-size: 11px;
+    gap: 3px;
+  }
+
+  .country-selected-note {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .category-content {
+    min-width: 0;
+  }
+
+  .categories {
+    padding: 25px 8px !important;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .category-content .section-header h2 {
+    font-size: 23px;
+  }
+
+  .category-content .section-header {
+    margin-bottom: 18px;
+  }
+
+  .category-list {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px;
+  }
+
+  .category-card {
+    min-height: 125px;
+    padding: 14px 10px;
+  }
+
+  .category-card span {
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .category-card h3 {
+    font-size: 15px;
+  }
+
+  .category-card p {
+    font-size: 11px;
+  }
+}
