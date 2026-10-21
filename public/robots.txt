@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://darkpirate632007-design.github.io/yalla-nakhruj/sitemap.xml
